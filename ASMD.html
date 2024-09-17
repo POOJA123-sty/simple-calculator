@@ -1,0 +1,143 @@
+<html>
+
+<head>
+    <title>Simple-Calculator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(to bottom right, #f0f, #f2a5f2);
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+
+        }
+
+        .input-box {
+            width: 50%;
+            height: 500px;
+            background-color: aliceblue;
+            border-radius: 15pt;
+            box-shadow: 5px 5px 30px #120112;
+            border: 2px solid #08010cac;
+
+            /* margin-top: 20px; 
+            
+        
+        
+            /* flex-direction: column; */
+            /* justify-content: center; */
+            /* align-items: center; */
+            
+        }
+         .num-box {
+            width: 200px;
+            height: auto;
+            background-color: #f2a5f2;
+            border-radius: 10px 0px 10px 0px;
+            font-weight: bold;
+ 
+            font-size: 25px;
+            padding: 20px;
+            margin: 20px;
+        }
+        #result{
+            width: 200px;
+            height: 50px;
+            
+            background-color: #fabbfa;
+            margin: 30px 10px 20px 20px;
+            transition: 0.5s;
+            text-align: center;
+
+
+        }
+
+        .cal button{
+            width: 100px;
+            height: 50px;
+            background-color: #f2a5f2 ;
+            border-radius: 15px 0px 12px 0px;
+            padding: 15px;
+            margin: 10px;
+            
+            font-weight: bold;
+ 
+            font-size: 25px;
+            color: #120112;
+            transition: 0.5s;
+            
+        }
+        .cal button:hover{
+            background-color: #7b439792;
+
+        }
+        ::placeholder{
+            font-size: 18px;
+        }
+        #result:hover{
+            background-color: plum;
+            color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="main"> -->
+    <div class="input-box">
+        <div>
+            <input type="text" placeholder="Enter NO." id="num1" class="num-box">
+            <input type="text" placeholder="Enter NO." id="num2" class="num-box">
+        </div>
+
+        <div class="cal">
+        <button onclick="findsum()">Add</button>
+        <button onclick="findsub()">Sub</button>
+        <button onclick="findmul()">Mul</button>
+        <button onclick="finddiv()">Div</button>
+        </div>
+        <div class="result-box">
+            <h1 id="result" >result</h1>
+
+        </div>
+
+
+     </div>
+
+
+    <!-- <div>
+        <h1 id="result"></h1>
+    </div> -->
+    <script>
+        const num1 = document.getElementById('num1');
+        const num2 = document.getElementById('num2');
+        const result = document.getElementById('result');
+        function findsum() {
+            const c = parseInt(num1.value) + parseInt(num2.value);
+            result.innerHTML = "Sum =" + c;
+        }
+        function findsub() {
+            const c = parseInt(num1.value) - parseInt(num2.value);
+            result.innerHTML = "Sub =" + c;
+        }
+        function findmul() {
+            const c = parseInt(num1.value) * parseInt(num2.value);
+            result.innerHTML = "Mul =" + c;
+        }
+        function finddiv() {
+            const c = parseInt(num1.value) / parseInt(num2.value);
+            result.innerHTML = "Div =" + c;
+        }
+
+
+
+    </script>
+</body>
+
+</html>
